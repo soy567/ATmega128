@@ -13,8 +13,8 @@
 #define BUTTON3	2
 #define BUTTON4	3
 
-#define RELEASED 1
-#define PUSHED 0
+#define RELEASED 1 // 누르지 않았을 때 MCU로 high 입력
+#define PUSHED 0 // 버튼 눌렸을 때 MCU로 low 입력
 #define TRUE 1
 #define FALSE 0
 
