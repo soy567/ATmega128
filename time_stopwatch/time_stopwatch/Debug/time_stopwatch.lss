@@ -1,0 +1,1228 @@
+
+time_stopwatch.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000e  00800100  00000638  000006cc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000638  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000019  0080010e  0080010e  000006da  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000006da  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000070c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000140  00000000  00000000  0000074c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   0000121c  00000000  00000000  0000088c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000c85  00000000  00000000  00001aa8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000094b  00000000  00000000  0000272d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000258  00000000  00000000  00003078  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000669  00000000  00000000  000032d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000339  00000000  00000000  00003939  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000e0  00000000  00000000  00003c72  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	89 c1       	rjmp	.+786    	; 0x354 <__vector_16>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e8 e3       	ldi	r30, 0x38	; 56
+  a0:	f6 e0       	ldi	r31, 0x06	; 6
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	ae 30       	cpi	r26, 0x0E	; 14
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	ae e0       	ldi	r26, 0x0E	; 14
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a7 32       	cpi	r26, 0x27	; 39
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	83 d1       	rcall	.+774    	; 0x3ca <main>
+  c4:	b7 c2       	rjmp	.+1390   	; 0x634 <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <buttonInit>:
+﻿#include "Button.h"
+
+//버튼 초기화 코드 (초기값 모두 0으로 초기화)
+void buttonInit()
+{
+	BUTTON_DDR &= ~((1 << BUTTON1) | (1 << BUTTON2) | (1 << BUTTON3));
+  c8:	84 b3       	in	r24, 0x14	; 20
+  ca:	88 7f       	andi	r24, 0xF8	; 248
+  cc:	84 bb       	out	0x14, r24	; 20
+  ce:	08 95       	ret
+
+000000d0 <getButton1State>:
+// 버튼 상태(True or False) 가져오는 코드
+uint8_t getButton1State()
+{
+	// 정적변수 Static -> 함수 종료되어도 프로그램 종료시 까지 값 유지됨
+	static uint8_t prevButton1State = RELEASED;
+	uint8_t curButtonState = BUTTON_PIN & (1 << BUTTON1);
+  d0:	83 b3       	in	r24, 0x13	; 19
+  d2:	98 2f       	mov	r25, r24
+  d4:	91 70       	andi	r25, 0x01	; 1
+
+	if (prevButton1State != PUSHED && curButtonState == PUSHED)
+  d6:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <prevButton1State.1736>
+  da:	88 23       	and	r24, r24
+  dc:	31 f0       	breq	.+12     	; 0xea <getButton1State+0x1a>
+  de:	91 11       	cpse	r25, r1
+  e0:	04 c0       	rjmp	.+8      	; 0xea <getButton1State+0x1a>
+	{
+		//_delay_ms(50); // charttering SW적으로 제거하기 위한 코드
+		prevButton1State = PUSHED;
+  e2:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <prevButton1State.1736>
+		return FALSE;
+  e6:	80 e0       	ldi	r24, 0x00	; 0
+  e8:	08 95       	ret
+	}
+	else if (prevButton1State == PUSHED && curButtonState != PUSHED)
+  ea:	81 11       	cpse	r24, r1
+  ec:	06 c0       	rjmp	.+12     	; 0xfa <getButton1State+0x2a>
+  ee:	99 23       	and	r25, r25
+  f0:	29 f0       	breq	.+10     	; 0xfc <getButton1State+0x2c>
+	{
+		//_delay_ms(50);
+		prevButton1State = RELEASED;
+  f2:	81 e0       	ldi	r24, 0x01	; 1
+  f4:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <prevButton1State.1736>
+		return TRUE;
+  f8:	08 95       	ret
+	}
+	return FALSE; // 변화없는 상황일 경우 항상 FALSE
+  fa:	80 e0       	ldi	r24, 0x00	; 0
+}
+  fc:	08 95       	ret
+
+000000fe <getButton2State>:
+
+uint8_t getButton2State()
+{
+	static uint8_t prevButton2State = RELEASED;
+	uint8_t curButtonState = BUTTON_PIN & (1 << BUTTON2);
+  fe:	83 b3       	in	r24, 0x13	; 19
+ 100:	98 2f       	mov	r25, r24
+ 102:	92 70       	andi	r25, 0x02	; 2
+
+	if (prevButton2State != PUSHED && curButtonState == PUSHED)
+ 104:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <prevButton2State.1740>
+ 108:	88 23       	and	r24, r24
+ 10a:	31 f0       	breq	.+12     	; 0x118 <getButton2State+0x1a>
+ 10c:	91 11       	cpse	r25, r1
+ 10e:	04 c0       	rjmp	.+8      	; 0x118 <getButton2State+0x1a>
+	{
+		//_delay_ms(50);
+		prevButton2State = PUSHED;
+ 110:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <prevButton2State.1740>
+		return FALSE;
+ 114:	80 e0       	ldi	r24, 0x00	; 0
+ 116:	08 95       	ret
+	}
+	else if (prevButton2State == PUSHED && curButtonState != PUSHED)
+ 118:	81 11       	cpse	r24, r1
+ 11a:	06 c0       	rjmp	.+12     	; 0x128 <getButton2State+0x2a>
+ 11c:	99 23       	and	r25, r25
+ 11e:	29 f0       	breq	.+10     	; 0x12a <getButton2State+0x2c>
+	{
+		//_delay_ms(50);
+		prevButton2State = RELEASED;
+ 120:	81 e0       	ldi	r24, 0x01	; 1
+ 122:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <prevButton2State.1740>
+		return TRUE;
+ 126:	08 95       	ret
+	}
+	return FALSE;
+ 128:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 12a:	08 95       	ret
+
+0000012c <getButton3State>:
+
+uint8_t getButton3State()
+{
+	static uint8_t prevButton3State = RELEASED;
+	uint8_t curButtonState = BUTTON_PIN & (1 << BUTTON3);
+ 12c:	83 b3       	in	r24, 0x13	; 19
+ 12e:	98 2f       	mov	r25, r24
+ 130:	94 70       	andi	r25, 0x04	; 4
+
+	if (prevButton3State != PUSHED && curButtonState == PUSHED)
+ 132:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
+ 136:	88 23       	and	r24, r24
+ 138:	31 f0       	breq	.+12     	; 0x146 <getButton3State+0x1a>
+ 13a:	91 11       	cpse	r25, r1
+ 13c:	04 c0       	rjmp	.+8      	; 0x146 <getButton3State+0x1a>
+	{
+		//_delay_ms(50);
+		prevButton3State = PUSHED;
+ 13e:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
+		return FALSE;
+ 142:	80 e0       	ldi	r24, 0x00	; 0
+ 144:	08 95       	ret
+	}
+	else if (prevButton3State == PUSHED && curButtonState != PUSHED)
+ 146:	81 11       	cpse	r24, r1
+ 148:	06 c0       	rjmp	.+12     	; 0x156 <getButton3State+0x2a>
+ 14a:	99 23       	and	r25, r25
+ 14c:	29 f0       	breq	.+10     	; 0x158 <getButton3State+0x2c>
+	{
+		//_delay_ms(50);
+		prevButton3State = RELEASED;
+ 14e:	81 e0       	ldi	r24, 0x01	; 1
+ 150:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__data_start>
+		return TRUE;
+ 154:	08 95       	ret
+	}
+	return FALSE;
+ 156:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 158:	08 95       	ret
+
+0000015a <setFndData>:
+int fndValue = 0; // FND device의 속성값.
+
+// FND 데이터 수정 함수
+void setFndData(int data)
+{
+	if (data >= 10000)
+ 15a:	80 31       	cpi	r24, 0x10	; 16
+ 15c:	27 e2       	ldi	r18, 0x27	; 39
+ 15e:	92 07       	cpc	r25, r18
+ 160:	1c f4       	brge	.+6      	; 0x168 <setFndData+0xe>
+		data = 9999; // 출력범위 초과한 경우 9999
+	else if (data < 0)
+ 162:	99 23       	and	r25, r25
+ 164:	34 f4       	brge	.+12     	; 0x172 <setFndData+0x18>
+ 166:	03 c0       	rjmp	.+6      	; 0x16e <setFndData+0x14>
+
+// FND 데이터 수정 함수
+void setFndData(int data)
+{
+	if (data >= 10000)
+		data = 9999; // 출력범위 초과한 경우 9999
+ 168:	8f e0       	ldi	r24, 0x0F	; 15
+ 16a:	97 e2       	ldi	r25, 0x27	; 39
+ 16c:	02 c0       	rjmp	.+4      	; 0x172 <setFndData+0x18>
+	else if (data < 0)
+		data = 0; // 입력 데이터 0보다 작은경우 0
+ 16e:	80 e0       	ldi	r24, 0x00	; 0
+ 170:	90 e0       	ldi	r25, 0x00	; 0
+
+	fndValue = data; // 입력받은 데이터 fndValue에 입력
+ 172:	90 93 10 01 	sts	0x0110, r25	; 0x800110 <fndValue+0x1>
+ 176:	80 93 0f 01 	sts	0x010F, r24	; 0x80010f <fndValue>
+ 17a:	08 95       	ret
+
+0000017c <getFndData>:
+
+// FND의 데이터 가져오기
+int getFndData()
+{
+	return fndValue;
+}
+ 17c:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <fndValue>
+ 180:	90 91 10 01 	lds	r25, 0x0110	; 0x800110 <fndValue+0x1>
+ 184:	08 95       	ret
+
+00000186 <fndInit>:
+}
+
+// FND 초기화 함수
+void fndInit()
+{
+	FND_DATA_DDR = 0xff; // 출력으로 DDR 설정
+ 186:	8f ef       	ldi	r24, 0xFF	; 255
+ 188:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+	// 초기 출력값은 모두 1로 설정
+	FND_COM_DDR |= (1 << FND_COM_D4) | (1 << FND_COM_D3) | (1 << FND_COM_D2) | (1 << FND_COM_D1);
+ 18c:	82 b1       	in	r24, 0x02	; 2
+ 18e:	80 6f       	ori	r24, 0xF0	; 240
+ 190:	82 b9       	out	0x02, r24	; 2
+ 192:	08 95       	ret
+
+00000194 <fndWriteData>:
+	}
+}
+
+// FND에 데이터 쓰기 함수
+void fndWriteData(uint8_t fndPosition, uint8_t fndData)
+{
+ 194:	cf 93       	push	r28
+ 196:	df 93       	push	r29
+ 198:	cd b7       	in	r28, 0x3d	; 61
+ 19a:	de b7       	in	r29, 0x3e	; 62
+ 19c:	2a 97       	sbiw	r28, 0x0a	; 10
+ 19e:	0f b6       	in	r0, 0x3f	; 63
+ 1a0:	f8 94       	cli
+ 1a2:	de bf       	out	0x3e, r29	; 62
+ 1a4:	0f be       	out	0x3f, r0	; 63
+ 1a6:	cd bf       	out	0x3d, r28	; 61
+	// FND의 폰트 정의 (0~9, 각각이 7seg에서 불을 켤 LED를 나타냄)
+	uint8_t aFndFont[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x27, 0x7f, 0x67};
+ 1a8:	9a e0       	ldi	r25, 0x0A	; 10
+ 1aa:	e3 e0       	ldi	r30, 0x03	; 3
+ 1ac:	f1 e0       	ldi	r31, 0x01	; 1
+ 1ae:	de 01       	movw	r26, r28
+ 1b0:	11 96       	adiw	r26, 0x01	; 1
+ 1b2:	01 90       	ld	r0, Z+
+ 1b4:	0d 92       	st	X+, r0
+ 1b6:	9a 95       	dec	r25
+ 1b8:	e1 f7       	brne	.-8      	; 0x1b2 <fndWriteData+0x1e>
+
+	// 각 자릿수 데이터 범위 검사
+	if (fndData >= 10)
+ 1ba:	6a 30       	cpi	r22, 0x0A	; 10
+ 1bc:	08 f0       	brcs	.+2      	; 0x1c0 <fndWriteData+0x2c>
+		fndData = 0;
+ 1be:	60 e0       	ldi	r22, 0x00	; 0
+	else if (fndData < 0)
+		fndData = 0;
+
+	// 각 자릿수 위치 데이터 범위 검사
+	if (fndPosition >= 4)
+ 1c0:	84 30       	cpi	r24, 0x04	; 4
+ 1c2:	08 f0       	brcs	.+2      	; 0x1c6 <fndWriteData+0x32>
+		fndPosition = 0;
+ 1c4:	80 e0       	ldi	r24, 0x00	; 0
+	else if (fndPosition < 0)
+		fndPosition = 0;
+
+	// COM포트의 값 0으로 초기화
+	FND_COM_PORT &= ~((1 << FND_COM_D4) | (1 << FND_COM_D3) | (1 << FND_COM_D2) | (1 << FND_COM_D1));
+ 1c6:	93 b1       	in	r25, 0x03	; 3
+ 1c8:	9f 70       	andi	r25, 0x0F	; 15
+ 1ca:	93 b9       	out	0x03, r25	; 3
+	// Data Port에 fndData에 해당하는 숫자 Font 데이터 입력 (Common Anode 이므로 비트 반전)
+	FND_DATA_PORT = ~aFndFont[fndData];
+ 1cc:	e1 e0       	ldi	r30, 0x01	; 1
+ 1ce:	f0 e0       	ldi	r31, 0x00	; 0
+ 1d0:	ec 0f       	add	r30, r28
+ 1d2:	fd 1f       	adc	r31, r29
+ 1d4:	e6 0f       	add	r30, r22
+ 1d6:	f1 1d       	adc	r31, r1
+ 1d8:	90 81       	ld	r25, Z
+ 1da:	90 95       	com	r25
+ 1dc:	90 93 62 00 	sts	0x0062, r25	; 0x800062 <__TEXT_REGION_LENGTH__+0x7e0062>
+
+	switch (fndPosition)
+ 1e0:	81 30       	cpi	r24, 0x01	; 1
+ 1e2:	51 f0       	breq	.+20     	; 0x1f8 <fndWriteData+0x64>
+ 1e4:	28 f0       	brcs	.+10     	; 0x1f0 <fndWriteData+0x5c>
+ 1e6:	82 30       	cpi	r24, 0x02	; 2
+ 1e8:	59 f0       	breq	.+22     	; 0x200 <fndWriteData+0x6c>
+ 1ea:	83 30       	cpi	r24, 0x03	; 3
+ 1ec:	69 f0       	breq	.+26     	; 0x208 <fndWriteData+0x74>
+ 1ee:	0f c0       	rjmp	.+30     	; 0x20e <fndWriteData+0x7a>
+	{
+	case FND_DIGIT_1:
+		FND_COM_PORT |= (1 << FND_COM_D1); //천의 자리 Seg 활성화
+ 1f0:	83 b1       	in	r24, 0x03	; 3
+ 1f2:	80 61       	ori	r24, 0x10	; 16
+ 1f4:	83 b9       	out	0x03, r24	; 3
+		break;
+ 1f6:	0b c0       	rjmp	.+22     	; 0x20e <fndWriteData+0x7a>
+	case FND_DIGIT_2:
+		FND_COM_PORT |= (1 << FND_COM_D2); //백의 자리 Seg 활성화
+ 1f8:	83 b1       	in	r24, 0x03	; 3
+ 1fa:	80 62       	ori	r24, 0x20	; 32
+ 1fc:	83 b9       	out	0x03, r24	; 3
+		break;
+ 1fe:	07 c0       	rjmp	.+14     	; 0x20e <fndWriteData+0x7a>
+	case FND_DIGIT_3:
+		FND_COM_PORT |= (1 << FND_COM_D3); //십의 자리 Seg 활성화
+ 200:	83 b1       	in	r24, 0x03	; 3
+ 202:	80 64       	ori	r24, 0x40	; 64
+ 204:	83 b9       	out	0x03, r24	; 3
+		break;
+ 206:	03 c0       	rjmp	.+6      	; 0x20e <fndWriteData+0x7a>
+	case FND_DIGIT_4:
+		FND_COM_PORT |= (1 << FND_COM_D4); //일의 자리 Seg 활성화
+ 208:	83 b1       	in	r24, 0x03	; 3
+ 20a:	80 68       	ori	r24, 0x80	; 128
+ 20c:	83 b9       	out	0x03, r24	; 3
+		break;
+	}
+}
+ 20e:	2a 96       	adiw	r28, 0x0a	; 10
+ 210:	0f b6       	in	r0, 0x3f	; 63
+ 212:	f8 94       	cli
+ 214:	de bf       	out	0x3e, r29	; 62
+ 216:	0f be       	out	0x3f, r0	; 63
+ 218:	cd bf       	out	0x3d, r28	; 61
+ 21a:	df 91       	pop	r29
+ 21c:	cf 91       	pop	r28
+ 21e:	08 95       	ret
+
+00000220 <fndDispayData>:
+	FND_COM_DDR |= (1 << FND_COM_D4) | (1 << FND_COM_D3) | (1 << FND_COM_D2) | (1 << FND_COM_D1);
+}
+
+// FND에 출력할 각 자릿수 데이터 계산하고 출력하는 함수
+void fndDispayData(uint16_t fndData)
+{
+ 220:	ac 01       	movw	r20, r24
+	static uint8_t displayState = 0; // 출력상태 저장할 변수
+
+	// 데이터 범위 검사
+	if (fndData >= 10000)
+ 222:	80 31       	cpi	r24, 0x10	; 16
+ 224:	97 42       	sbci	r25, 0x27	; 39
+ 226:	10 f0       	brcs	.+4      	; 0x22c <fndDispayData+0xc>
+		fndData = 9999;
+ 228:	4f e0       	ldi	r20, 0x0F	; 15
+ 22a:	57 e2       	ldi	r21, 0x27	; 39
+	else if (fndData < 0)
+		fndData = 0;
+
+	// 표시할 디스플레이의 자릿수 지정
+	displayState = (displayState + 1) % 4;
+ 22c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__data_end>
+ 230:	90 e0       	ldi	r25, 0x00	; 0
+ 232:	01 96       	adiw	r24, 0x01	; 1
+ 234:	83 70       	andi	r24, 0x03	; 3
+ 236:	90 78       	andi	r25, 0x80	; 128
+ 238:	99 23       	and	r25, r25
+ 23a:	24 f4       	brge	.+8      	; 0x244 <fndDispayData+0x24>
+ 23c:	01 97       	sbiw	r24, 0x01	; 1
+ 23e:	8c 6f       	ori	r24, 0xFC	; 252
+ 240:	9f 6f       	ori	r25, 0xFF	; 255
+ 242:	01 96       	adiw	r24, 0x01	; 1
+ 244:	80 93 0e 01 	sts	0x010E, r24	; 0x80010e <__data_end>
+
+	switch (displayState)
+ 248:	81 30       	cpi	r24, 0x01	; 1
+ 24a:	e1 f0       	breq	.+56     	; 0x284 <fndDispayData+0x64>
+ 24c:	38 f0       	brcs	.+14     	; 0x25c <fndDispayData+0x3c>
+ 24e:	82 30       	cpi	r24, 0x02	; 2
+ 250:	09 f4       	brne	.+2      	; 0x254 <fndDispayData+0x34>
+ 252:	3e c0       	rjmp	.+124    	; 0x2d0 <fndDispayData+0xb0>
+ 254:	83 30       	cpi	r24, 0x03	; 3
+ 256:	09 f4       	brne	.+2      	; 0x25a <fndDispayData+0x3a>
+ 258:	5f c0       	rjmp	.+190    	; 0x318 <fndDispayData+0xf8>
+ 25a:	08 95       	ret
+	{
+	case 0:
+		fndWriteData(FND_DIGIT_1, fndData / 1000); // 천의 자리 출력
+ 25c:	9a 01       	movw	r18, r20
+ 25e:	36 95       	lsr	r19
+ 260:	27 95       	ror	r18
+ 262:	36 95       	lsr	r19
+ 264:	27 95       	ror	r18
+ 266:	36 95       	lsr	r19
+ 268:	27 95       	ror	r18
+ 26a:	a5 ec       	ldi	r26, 0xC5	; 197
+ 26c:	b0 e2       	ldi	r27, 0x20	; 32
+ 26e:	bf d1       	rcall	.+894    	; 0x5ee <__umulhisi3>
+ 270:	92 95       	swap	r25
+ 272:	82 95       	swap	r24
+ 274:	8f 70       	andi	r24, 0x0F	; 15
+ 276:	89 27       	eor	r24, r25
+ 278:	9f 70       	andi	r25, 0x0F	; 15
+ 27a:	89 27       	eor	r24, r25
+ 27c:	68 2f       	mov	r22, r24
+ 27e:	80 e0       	ldi	r24, 0x00	; 0
+ 280:	89 cf       	rjmp	.-238    	; 0x194 <fndWriteData>
+		break;
+ 282:	08 95       	ret
+	case 1:
+		fndWriteData(FND_DIGIT_2, fndData / 100 % 10); // 백의 자리 출력
+ 284:	9a 01       	movw	r18, r20
+ 286:	36 95       	lsr	r19
+ 288:	27 95       	ror	r18
+ 28a:	36 95       	lsr	r19
+ 28c:	27 95       	ror	r18
+ 28e:	ab e7       	ldi	r26, 0x7B	; 123
+ 290:	b4 e1       	ldi	r27, 0x14	; 20
+ 292:	ad d1       	rcall	.+858    	; 0x5ee <__umulhisi3>
+ 294:	ac 01       	movw	r20, r24
+ 296:	56 95       	lsr	r21
+ 298:	47 95       	ror	r20
+ 29a:	9a 01       	movw	r18, r20
+ 29c:	ad ec       	ldi	r26, 0xCD	; 205
+ 29e:	bc ec       	ldi	r27, 0xCC	; 204
+ 2a0:	a6 d1       	rcall	.+844    	; 0x5ee <__umulhisi3>
+ 2a2:	96 95       	lsr	r25
+ 2a4:	87 95       	ror	r24
+ 2a6:	96 95       	lsr	r25
+ 2a8:	87 95       	ror	r24
+ 2aa:	96 95       	lsr	r25
+ 2ac:	87 95       	ror	r24
+ 2ae:	bc 01       	movw	r22, r24
+ 2b0:	66 0f       	add	r22, r22
+ 2b2:	77 1f       	adc	r23, r23
+ 2b4:	88 0f       	add	r24, r24
+ 2b6:	99 1f       	adc	r25, r25
+ 2b8:	88 0f       	add	r24, r24
+ 2ba:	99 1f       	adc	r25, r25
+ 2bc:	88 0f       	add	r24, r24
+ 2be:	99 1f       	adc	r25, r25
+ 2c0:	86 0f       	add	r24, r22
+ 2c2:	97 1f       	adc	r25, r23
+ 2c4:	28 1b       	sub	r18, r24
+ 2c6:	39 0b       	sbc	r19, r25
+ 2c8:	62 2f       	mov	r22, r18
+ 2ca:	81 e0       	ldi	r24, 0x01	; 1
+ 2cc:	63 cf       	rjmp	.-314    	; 0x194 <fndWriteData>
+		break;
+ 2ce:	08 95       	ret
+	case 2:
+		fndWriteData(FND_DIGIT_3, fndData / 10 % 10); // 십의 자리
+ 2d0:	9a 01       	movw	r18, r20
+ 2d2:	ad ec       	ldi	r26, 0xCD	; 205
+ 2d4:	bc ec       	ldi	r27, 0xCC	; 204
+ 2d6:	8b d1       	rcall	.+790    	; 0x5ee <__umulhisi3>
+ 2d8:	ac 01       	movw	r20, r24
+ 2da:	56 95       	lsr	r21
+ 2dc:	47 95       	ror	r20
+ 2de:	56 95       	lsr	r21
+ 2e0:	47 95       	ror	r20
+ 2e2:	56 95       	lsr	r21
+ 2e4:	47 95       	ror	r20
+ 2e6:	9a 01       	movw	r18, r20
+ 2e8:	82 d1       	rcall	.+772    	; 0x5ee <__umulhisi3>
+ 2ea:	96 95       	lsr	r25
+ 2ec:	87 95       	ror	r24
+ 2ee:	96 95       	lsr	r25
+ 2f0:	87 95       	ror	r24
+ 2f2:	96 95       	lsr	r25
+ 2f4:	87 95       	ror	r24
+ 2f6:	bc 01       	movw	r22, r24
+ 2f8:	66 0f       	add	r22, r22
+ 2fa:	77 1f       	adc	r23, r23
+ 2fc:	88 0f       	add	r24, r24
+ 2fe:	99 1f       	adc	r25, r25
+ 300:	88 0f       	add	r24, r24
+ 302:	99 1f       	adc	r25, r25
+ 304:	88 0f       	add	r24, r24
+ 306:	99 1f       	adc	r25, r25
+ 308:	86 0f       	add	r24, r22
+ 30a:	97 1f       	adc	r25, r23
+ 30c:	28 1b       	sub	r18, r24
+ 30e:	39 0b       	sbc	r19, r25
+ 310:	62 2f       	mov	r22, r18
+ 312:	82 e0       	ldi	r24, 0x02	; 2
+ 314:	3f cf       	rjmp	.-386    	; 0x194 <fndWriteData>
+		break;
+ 316:	08 95       	ret
+	case 3:
+		fndWriteData(FND_DIGIT_4, fndData % 10); // 일의 자리
+ 318:	9a 01       	movw	r18, r20
+ 31a:	ad ec       	ldi	r26, 0xCD	; 205
+ 31c:	bc ec       	ldi	r27, 0xCC	; 204
+ 31e:	67 d1       	rcall	.+718    	; 0x5ee <__umulhisi3>
+ 320:	96 95       	lsr	r25
+ 322:	87 95       	ror	r24
+ 324:	96 95       	lsr	r25
+ 326:	87 95       	ror	r24
+ 328:	96 95       	lsr	r25
+ 32a:	87 95       	ror	r24
+ 32c:	bc 01       	movw	r22, r24
+ 32e:	66 0f       	add	r22, r22
+ 330:	77 1f       	adc	r23, r23
+ 332:	88 0f       	add	r24, r24
+ 334:	99 1f       	adc	r25, r25
+ 336:	88 0f       	add	r24, r24
+ 338:	99 1f       	adc	r25, r25
+ 33a:	88 0f       	add	r24, r24
+ 33c:	99 1f       	adc	r25, r25
+ 33e:	86 0f       	add	r24, r22
+ 340:	97 1f       	adc	r25, r23
+ 342:	28 1b       	sub	r18, r24
+ 344:	39 0b       	sbc	r19, r25
+ 346:	62 2f       	mov	r22, r18
+ 348:	83 e0       	ldi	r24, 0x03	; 3
+ 34a:	24 cf       	rjmp	.-440    	; 0x194 <fndWriteData>
+ 34c:	08 95       	ret
+
+0000034e <fndISRProcess>:
+ 34e:	16 df       	rcall	.-468    	; 0x17c <getFndData>
+}
+
+// 인터럽트 작동시 FND 처리함수
+void fndISRProcess()
+{
+	fndDispayData(getFndData());
+ 350:	67 cf       	rjmp	.-306    	; 0x220 <fndDispayData>
+ 352:	08 95       	ret
+
+00000354 <__vector_16>:
+#include "timeClock.h"
+#include "StopWatch.h"
+#include "timeClockState.h"
+
+ISR(TIMER0_OVF_vect)
+{
+ 354:	1f 92       	push	r1
+ 356:	0f 92       	push	r0
+ 358:	0f b6       	in	r0, 0x3f	; 63
+ 35a:	0f 92       	push	r0
+ 35c:	11 24       	eor	r1, r1
+ 35e:	0b b6       	in	r0, 0x3b	; 59
+ 360:	0f 92       	push	r0
+ 362:	2f 93       	push	r18
+ 364:	3f 93       	push	r19
+ 366:	4f 93       	push	r20
+ 368:	5f 93       	push	r21
+ 36a:	6f 93       	push	r22
+ 36c:	7f 93       	push	r23
+ 36e:	8f 93       	push	r24
+ 370:	9f 93       	push	r25
+ 372:	af 93       	push	r26
+ 374:	bf 93       	push	r27
+ 376:	ef 93       	push	r30
+ 378:	ff 93       	push	r31
+	TCNT0 = 6; // 1ms 간격으로 인터럽트 발생
+ 37a:	86 e0       	ldi	r24, 0x06	; 6
+ 37c:	82 bf       	out	0x32, r24	; 50
+	// 스톱워치 작동상태이면
+	if (getStopWatchState() == eStopWatchRun)
+ 37e:	42 d0       	rcall	.+132    	; 0x404 <getStopWatchState>
+ 380:	01 97       	sbiw	r24, 0x01	; 1
+ 382:	19 f4       	brne	.+6      	; 0x38a <__vector_16+0x36>
+	{
+		incMSec(&stStopWatch); // 스톱워치 시간계산 시작
+ 384:	83 e1       	ldi	r24, 0x13	; 19
+ 386:	91 e0       	ldi	r25, 0x01	; 1
+ 388:	dd d0       	rcall	.+442    	; 0x544 <incMSec>
+	}
+	incMSec(&stTimeClock); // 시계 시간계산 시작
+ 38a:	8d e1       	ldi	r24, 0x1D	; 29
+ 38c:	91 e0       	ldi	r25, 0x01	; 1
+	fndISRProcess();
+ 38e:	da d0       	rcall	.+436    	; 0x544 <incMSec>
+ 390:	de df       	rcall	.-68     	; 0x34e <fndISRProcess>
+}
+ 392:	ff 91       	pop	r31
+ 394:	ef 91       	pop	r30
+ 396:	bf 91       	pop	r27
+ 398:	af 91       	pop	r26
+ 39a:	9f 91       	pop	r25
+ 39c:	8f 91       	pop	r24
+ 39e:	7f 91       	pop	r23
+ 3a0:	6f 91       	pop	r22
+ 3a2:	5f 91       	pop	r21
+ 3a4:	4f 91       	pop	r20
+ 3a6:	3f 91       	pop	r19
+ 3a8:	2f 91       	pop	r18
+ 3aa:	0f 90       	pop	r0
+ 3ac:	0b be       	out	0x3b, r0	; 59
+ 3ae:	0f 90       	pop	r0
+ 3b0:	0f be       	out	0x3f, r0	; 63
+ 3b2:	0f 90       	pop	r0
+ 3b4:	1f 90       	pop	r1
+ 3b6:	18 95       	reti
+
+000003b8 <timerInt1MsInit>:
+
+// 인터럽트 초기화 함수
+void timerInt1MsInit()
+{
+	TCCR0 |= (1 << CS02); // | (1<<CS01) | (1<<CS00);
+ 3b8:	83 b7       	in	r24, 0x33	; 51
+ 3ba:	84 60       	ori	r24, 0x04	; 4
+ 3bc:	83 bf       	out	0x33, r24	; 51
+	TIMSK |= (1 << TOIE0);
+ 3be:	87 b7       	in	r24, 0x37	; 55
+ 3c0:	81 60       	ori	r24, 0x01	; 1
+ 3c2:	87 bf       	out	0x37, r24	; 55
+	TCNT0 = 6;
+ 3c4:	86 e0       	ldi	r24, 0x06	; 6
+ 3c6:	82 bf       	out	0x32, r24	; 50
+ 3c8:	08 95       	ret
+
+000003ca <main>:
+}; // 상태 나타내기 위해 enum 사용
+
+int main(void)
+{
+	uint8_t digitalClockState = eTimeClockState; // 스톱워치, 시계 상태 구분 변수 정의
+	timerInt1MsInit();
+ 3ca:	f6 df       	rcall	.-20     	; 0x3b8 <timerInt1MsInit>
+	fndInit();
+ 3cc:	dc de       	rcall	.-584    	; 0x186 <fndInit>
+	buttonInit();
+ 3ce:	7c de       	rcall	.-776    	; 0xc8 <buttonInit>
+ 3d0:	78 94       	sei
+	sei(); // 인터럽트 작동
+ 3d2:	c0 e0       	ldi	r28, 0x00	; 0
+	eStopWatchState
+}; // 상태 나타내기 위해 enum 사용
+
+int main(void)
+{
+	uint8_t digitalClockState = eTimeClockState; // 스톱워치, 시계 상태 구분 변수 정의
+ 3d4:	03 c0       	rjmp	.+6      	; 0x3dc <main+0x12>
+ 3d6:	c1 e0       	ldi	r28, 0x01	; 1
+		{
+		case eTimeClockState:	   // 시계모드인 경우
+			timeClockExcute();	   // 시계 시작
+			if (getButton3State()) // 버튼 3이 눌린경우
+			{
+				digitalClockState = eStopWatchState; // 모드변경
+ 3d8:	01 c0       	rjmp	.+2      	; 0x3dc <main+0x12>
+ 3da:	c0 e0       	ldi	r28, 0x00	; 0
+			break;
+		case eStopWatchState:	   // 스톱워치 모드인 경우
+			stopWatchExcute();	   // 스톱워치 시작
+			if (getButton3State()) // 버튼 3이 눌린경우
+			{
+				digitalClockState = eTimeClockState; // 모드변경
+ 3dc:	cc 23       	and	r28, r28
+	buttonInit();
+	sei(); // 인터럽트 작동
+
+	while (1)
+	{
+		switch (digitalClockState) // 시계 상태에 따라
+ 3de:	19 f0       	breq	.+6      	; 0x3e6 <main+0x1c>
+ 3e0:	c1 30       	cpi	r28, 0x01	; 1
+ 3e2:	31 f0       	breq	.+12     	; 0x3f0 <main+0x26>
+		{
+		case eTimeClockState:	   // 시계모드인 경우
+			timeClockExcute();	   // 시계 시작
+ 3e4:	fb cf       	rjmp	.-10     	; 0x3dc <main+0x12>
+ 3e6:	e0 d0       	rcall	.+448    	; 0x5a8 <timeClockExcute>
+			if (getButton3State()) // 버튼 3이 눌린경우
+ 3e8:	a1 de       	rcall	.-702    	; 0x12c <getButton3State>
+ 3ea:	81 11       	cpse	r24, r1
+ 3ec:	f4 cf       	rjmp	.-24     	; 0x3d6 <main+0xc>
+			{
+				digitalClockState = eStopWatchState; // 모드변경
+			}
+			break;
+		case eStopWatchState:	   // 스톱워치 모드인 경우
+			stopWatchExcute();	   // 스톱워치 시작
+ 3ee:	f6 cf       	rjmp	.-20     	; 0x3dc <main+0x12>
+ 3f0:	7d d0       	rcall	.+250    	; 0x4ec <stopWatchExcute>
+			if (getButton3State()) // 버튼 3이 눌린경우
+ 3f2:	9c de       	rcall	.-712    	; 0x12c <getButton3State>
+ 3f4:	81 11       	cpse	r24, r1
+ 3f6:	f1 cf       	rjmp	.-30     	; 0x3da <main+0x10>
+ 3f8:	f1 cf       	rjmp	.-30     	; 0x3dc <main+0x12>
+
+000003fa <setStopWatchState>:
+
+int stopWatchState = eStopWatchStop; // 스톱워치 상태 저장할 변수 정의
+
+void setStopWatchState(int state) // 스톱워치 상태 변경함수
+{
+	stopWatchState = state;
+ 3fa:	90 93 12 01 	sts	0x0112, r25	; 0x800112 <stopWatchState+0x1>
+ 3fe:	80 93 11 01 	sts	0x0111, r24	; 0x800111 <stopWatchState>
+ 402:	08 95       	ret
+
+00000404 <getStopWatchState>:
+}
+
+int getStopWatchState() // 스톱워치 상태 가져오는 함수
+{
+	return stopWatchState;
+}
+ 404:	80 91 11 01 	lds	r24, 0x0111	; 0x800111 <stopWatchState>
+ 408:	90 91 12 01 	lds	r25, 0x0112	; 0x800112 <stopWatchState+0x1>
+ 40c:	08 95       	ret
+
+0000040e <stopWatchStop>:
+
+void stopWatchStop() // 스톱워치 멈추는 함수
+{
+	setFndData(stStopWatch.min * 1000 + stStopWatch.sec * 100 + stStopWatch.msec % 10);
+ 40e:	e3 e1       	ldi	r30, 0x13	; 19
+ 410:	f1 e0       	ldi	r31, 0x01	; 1
+ 412:	42 81       	ldd	r20, Z+2	; 0x02
+ 414:	53 81       	ldd	r21, Z+3	; 0x03
+ 416:	88 ee       	ldi	r24, 0xE8	; 232
+ 418:	93 e0       	ldi	r25, 0x03	; 3
+ 41a:	48 9f       	mul	r20, r24
+ 41c:	90 01       	movw	r18, r0
+ 41e:	49 9f       	mul	r20, r25
+ 420:	30 0d       	add	r19, r0
+ 422:	58 9f       	mul	r21, r24
+ 424:	30 0d       	add	r19, r0
+ 426:	11 24       	eor	r1, r1
+ 428:	44 81       	ldd	r20, Z+4	; 0x04
+ 42a:	55 81       	ldd	r21, Z+5	; 0x05
+ 42c:	64 e6       	ldi	r22, 0x64	; 100
+ 42e:	64 9f       	mul	r22, r20
+ 430:	c0 01       	movw	r24, r0
+ 432:	65 9f       	mul	r22, r21
+ 434:	90 0d       	add	r25, r0
+ 436:	11 24       	eor	r1, r1
+ 438:	28 0f       	add	r18, r24
+ 43a:	39 1f       	adc	r19, r25
+ 43c:	86 81       	ldd	r24, Z+6	; 0x06
+ 43e:	97 81       	ldd	r25, Z+7	; 0x07
+ 440:	6a e0       	ldi	r22, 0x0A	; 10
+ 442:	70 e0       	ldi	r23, 0x00	; 0
+ 444:	c1 d0       	rcall	.+386    	; 0x5c8 <__divmodhi4>
+ 446:	82 0f       	add	r24, r18
+ 448:	93 1f       	adc	r25, r19
+ 44a:	87 de       	rcall	.-754    	; 0x15a <setFndData>
+	if (getButton1State()) // 버튼 1 눌린경우
+ 44c:	41 de       	rcall	.-894    	; 0xd0 <getButton1State>
+ 44e:	88 23       	and	r24, r24
+ 450:	21 f0       	breq	.+8      	; 0x45a <stopWatchStop+0x4c>
+	{
+		setStopWatchState(eStopWatchRun); // 스톱워치 시작으로 상태 변경
+ 452:	81 e0       	ldi	r24, 0x01	; 1
+ 454:	90 e0       	ldi	r25, 0x00	; 0
+ 456:	d1 cf       	rjmp	.-94     	; 0x3fa <setStopWatchState>
+ 458:	08 95       	ret
+	}
+	else if (getButton2State()) // 버튼 2 눌린경우
+ 45a:	51 de       	rcall	.-862    	; 0xfe <getButton2State>
+ 45c:	88 23       	and	r24, r24
+ 45e:	19 f0       	breq	.+6      	; 0x466 <stopWatchStop+0x58>
+	{
+		setStopWatchState(eStopWatchReset); // 스톱워치 초기화
+ 460:	82 e0       	ldi	r24, 0x02	; 2
+ 462:	90 e0       	ldi	r25, 0x00	; 0
+ 464:	ca cf       	rjmp	.-108    	; 0x3fa <setStopWatchState>
+ 466:	08 95       	ret
+
+00000468 <stopWatchRun>:
+ 468:	e3 e1       	ldi	r30, 0x13	; 19
+}
+
+void stopWatchRun() // 스톱워치 시작함수
+{
+	// FND로 데이터 출력하여 시작
+	setFndData(stStopWatch.min * 1000 + stStopWatch.sec * 100 + stStopWatch.msec % 10);
+ 46a:	f1 e0       	ldi	r31, 0x01	; 1
+ 46c:	42 81       	ldd	r20, Z+2	; 0x02
+ 46e:	53 81       	ldd	r21, Z+3	; 0x03
+ 470:	88 ee       	ldi	r24, 0xE8	; 232
+ 472:	93 e0       	ldi	r25, 0x03	; 3
+ 474:	48 9f       	mul	r20, r24
+ 476:	90 01       	movw	r18, r0
+ 478:	49 9f       	mul	r20, r25
+ 47a:	30 0d       	add	r19, r0
+ 47c:	58 9f       	mul	r21, r24
+ 47e:	30 0d       	add	r19, r0
+ 480:	11 24       	eor	r1, r1
+ 482:	44 81       	ldd	r20, Z+4	; 0x04
+ 484:	55 81       	ldd	r21, Z+5	; 0x05
+ 486:	64 e6       	ldi	r22, 0x64	; 100
+ 488:	64 9f       	mul	r22, r20
+ 48a:	c0 01       	movw	r24, r0
+ 48c:	65 9f       	mul	r22, r21
+ 48e:	90 0d       	add	r25, r0
+ 490:	11 24       	eor	r1, r1
+ 492:	28 0f       	add	r18, r24
+ 494:	39 1f       	adc	r19, r25
+ 496:	86 81       	ldd	r24, Z+6	; 0x06
+ 498:	97 81       	ldd	r25, Z+7	; 0x07
+ 49a:	6a e0       	ldi	r22, 0x0A	; 10
+ 49c:	70 e0       	ldi	r23, 0x00	; 0
+ 49e:	94 d0       	rcall	.+296    	; 0x5c8 <__divmodhi4>
+ 4a0:	82 0f       	add	r24, r18
+ 4a2:	93 1f       	adc	r25, r19
+ 4a4:	5a de       	rcall	.-844    	; 0x15a <setFndData>
+	if (getButton1State()) // 버튼 1 눌린경우
+ 4a6:	14 de       	rcall	.-984    	; 0xd0 <getButton1State>
+ 4a8:	88 23       	and	r24, r24
+ 4aa:	19 f0       	breq	.+6      	; 0x4b2 <stopWatchRun+0x4a>
+	{
+		setStopWatchState(eStopWatchStop); // 스톱워치 멈춤
+ 4ac:	80 e0       	ldi	r24, 0x00	; 0
+ 4ae:	90 e0       	ldi	r25, 0x00	; 0
+ 4b0:	a4 cf       	rjmp	.-184    	; 0x3fa <setStopWatchState>
+ 4b2:	08 95       	ret
+
+000004b4 <stopWatchReset>:
+ 4b4:	ef 92       	push	r14
+	}
+}
+
+void stopWatchReset() // 스톱워치 리셋함수
+{
+ 4b6:	ff 92       	push	r15
+ 4b8:	0f 93       	push	r16
+ 4ba:	1f 93       	push	r17
+	setTimeClock(&stStopWatch, 0, 0, 0, 0, 0); // 타임클럭 모두 0으로 초기화
+ 4bc:	e1 2c       	mov	r14, r1
+ 4be:	f1 2c       	mov	r15, r1
+ 4c0:	00 e0       	ldi	r16, 0x00	; 0
+ 4c2:	10 e0       	ldi	r17, 0x00	; 0
+ 4c4:	20 e0       	ldi	r18, 0x00	; 0
+ 4c6:	30 e0       	ldi	r19, 0x00	; 0
+ 4c8:	40 e0       	ldi	r20, 0x00	; 0
+ 4ca:	50 e0       	ldi	r21, 0x00	; 0
+ 4cc:	60 e0       	ldi	r22, 0x00	; 0
+ 4ce:	70 e0       	ldi	r23, 0x00	; 0
+ 4d0:	83 e1       	ldi	r24, 0x13	; 19
+ 4d2:	91 e0       	ldi	r25, 0x01	; 1
+ 4d4:	23 d0       	rcall	.+70     	; 0x51c <setTimeClock>
+	setFndData(0);							   // FND 출력 0으로 지정
+ 4d6:	80 e0       	ldi	r24, 0x00	; 0
+ 4d8:	90 e0       	ldi	r25, 0x00	; 0
+ 4da:	3f de       	rcall	.-898    	; 0x15a <setFndData>
+	setStopWatchState(eStopWatchStop);		   // 상태 스톱워치 정지 상태로 정의
+ 4dc:	80 e0       	ldi	r24, 0x00	; 0
+ 4de:	90 e0       	ldi	r25, 0x00	; 0
+ 4e0:	8c df       	rcall	.-232    	; 0x3fa <setStopWatchState>
+}
+ 4e2:	1f 91       	pop	r17
+ 4e4:	0f 91       	pop	r16
+ 4e6:	ff 90       	pop	r15
+ 4e8:	ef 90       	pop	r14
+ 4ea:	08 95       	ret
+
+000004ec <stopWatchExcute>:
+
+void stopWatchExcute() // 스톱워치 실행 함수
+{
+	switch (stopWatchState)
+ 4ec:	80 91 11 01 	lds	r24, 0x0111	; 0x800111 <stopWatchState>
+ 4f0:	90 91 12 01 	lds	r25, 0x0112	; 0x800112 <stopWatchState+0x1>
+ 4f4:	81 30       	cpi	r24, 0x01	; 1
+ 4f6:	91 05       	cpc	r25, r1
+ 4f8:	49 f0       	breq	.+18     	; 0x50c <stopWatchExcute+0x20>
+ 4fa:	82 30       	cpi	r24, 0x02	; 2
+ 4fc:	91 05       	cpc	r25, r1
+ 4fe:	51 f0       	breq	.+20     	; 0x514 <stopWatchExcute+0x28>
+ 500:	89 2b       	or	r24, r25
+ 502:	59 f4       	brne	.+22     	; 0x51a <stopWatchExcute+0x2e>
+	{
+	case eStopWatchStop:
+		stopWatchStop(); // 스톱워치 멈춤
+ 504:	84 df       	rcall	.-248    	; 0x40e <stopWatchStop>
+		PORTD = 0x01;	 // FND 설정
+ 506:	81 e0       	ldi	r24, 0x01	; 1
+ 508:	82 bb       	out	0x12, r24	; 18
+		break;
+	case eStopWatchRun:
+		stopWatchRun(); // 스톱워치 실행
+ 50a:	08 95       	ret
+ 50c:	ad df       	rcall	.-166    	; 0x468 <stopWatchRun>
+		PORTD = 0x08;
+ 50e:	88 e0       	ldi	r24, 0x08	; 8
+		break;
+ 510:	82 bb       	out	0x12, r24	; 18
+	case eStopWatchReset:
+		stopWatchReset(); // 스톱워치 리셋
+ 512:	08 95       	ret
+ 514:	cf df       	rcall	.-98     	; 0x4b4 <stopWatchReset>
+		PORTD = 0x80;
+ 516:	80 e8       	ldi	r24, 0x80	; 128
+ 518:	82 bb       	out	0x12, r24	; 18
+ 51a:	08 95       	ret
+
+0000051c <setTimeClock>:
+﻿#include "timeClock.h"
+
+// 시간 구조체 값 수정하는 함수
+void setTimeClock(struct _timeClock *stClock, int hh, int mm, int ss, int msec, int ms)
+{
+ 51c:	ef 92       	push	r14
+ 51e:	ff 92       	push	r15
+ 520:	0f 93       	push	r16
+ 522:	1f 93       	push	r17
+ 524:	fc 01       	movw	r30, r24
+	stClock->hour = hh;
+ 526:	71 83       	std	Z+1, r23	; 0x01
+ 528:	60 83       	st	Z, r22
+	stClock->min = mm;
+ 52a:	53 83       	std	Z+3, r21	; 0x03
+ 52c:	42 83       	std	Z+2, r20	; 0x02
+	stClock->sec = ss;
+ 52e:	35 83       	std	Z+5, r19	; 0x05
+ 530:	24 83       	std	Z+4, r18	; 0x04
+	stClock->msec = msec;
+ 532:	17 83       	std	Z+7, r17	; 0x07
+ 534:	06 83       	std	Z+6, r16	; 0x06
+	stClock->ms = ms;
+ 536:	f1 86       	std	Z+9, r15	; 0x09
+ 538:	e0 86       	std	Z+8, r14	; 0x08
+}
+ 53a:	1f 91       	pop	r17
+ 53c:	0f 91       	pop	r16
+ 53e:	ff 90       	pop	r15
+ 540:	ef 90       	pop	r14
+ 542:	08 95       	ret
+
+00000544 <incMSec>:
+
+// 시간 계산하는 함수 (1ms 마다 실행  24:00:00 까지 측정가능)
+void incMSec(struct _timeClock *stClock)
+{
+ 544:	fc 01       	movw	r30, r24
+	stClock->ms++; // 실행시 ms증가
+ 546:	80 85       	ldd	r24, Z+8	; 0x08
+ 548:	91 85       	ldd	r25, Z+9	; 0x09
+ 54a:	01 96       	adiw	r24, 0x01	; 1
+ 54c:	91 87       	std	Z+9, r25	; 0x09
+ 54e:	80 87       	std	Z+8, r24	; 0x08
+
+	if (stClock->ms >= 100) // 100ms 도달시
+ 550:	84 36       	cpi	r24, 0x64	; 100
+ 552:	91 05       	cpc	r25, r1
+ 554:	44 f1       	brlt	.+80     	; 0x5a6 <incMSec+0x62>
+	{
+		stClock->ms = 0;		// ms = 0 초기화
+ 556:	11 86       	std	Z+9, r1	; 0x09
+ 558:	10 86       	std	Z+8, r1	; 0x08
+		stClock->msec++;		// 100ms 측정하는 msec 증가
+ 55a:	86 81       	ldd	r24, Z+6	; 0x06
+ 55c:	97 81       	ldd	r25, Z+7	; 0x07
+ 55e:	01 96       	adiw	r24, 0x01	; 1
+ 560:	97 83       	std	Z+7, r25	; 0x07
+ 562:	86 83       	std	Z+6, r24	; 0x06
+		if (stClock->msec > 10) // 1000ms -> 1s 도달시
+ 564:	0b 97       	sbiw	r24, 0x0b	; 11
+ 566:	3c f0       	brlt	.+14     	; 0x576 <incMSec+0x32>
+		{
+			stClock->msec = 0; // msec = 0 초기화
+ 568:	17 82       	std	Z+7, r1	; 0x07
+ 56a:	16 82       	std	Z+6, r1	; 0x06
+			stClock->sec++;	   // sec 증가
+ 56c:	84 81       	ldd	r24, Z+4	; 0x04
+ 56e:	95 81       	ldd	r25, Z+5	; 0x05
+ 570:	01 96       	adiw	r24, 0x01	; 1
+ 572:	95 83       	std	Z+5, r25	; 0x05
+ 574:	84 83       	std	Z+4, r24	; 0x04
+		}
+
+		if (stClock->sec >= 60) // 60s 도달시
+ 576:	84 81       	ldd	r24, Z+4	; 0x04
+ 578:	95 81       	ldd	r25, Z+5	; 0x05
+ 57a:	cc 97       	sbiw	r24, 0x3c	; 60
+ 57c:	a4 f0       	brlt	.+40     	; 0x5a6 <incMSec+0x62>
+		{
+			stClock->sec = 0;		// sec = 0 초기화
+ 57e:	15 82       	std	Z+5, r1	; 0x05
+ 580:	14 82       	std	Z+4, r1	; 0x04
+			stClock->min++;			// min 증가
+ 582:	82 81       	ldd	r24, Z+2	; 0x02
+ 584:	93 81       	ldd	r25, Z+3	; 0x03
+ 586:	01 96       	adiw	r24, 0x01	; 1
+ 588:	93 83       	std	Z+3, r25	; 0x03
+ 58a:	82 83       	std	Z+2, r24	; 0x02
+			if (stClock->min >= 60) // 60m 도달시
+ 58c:	cc 97       	sbiw	r24, 0x3c	; 60
+ 58e:	5c f0       	brlt	.+22     	; 0x5a6 <incMSec+0x62>
+			{
+				stClock->min = 0;		 // min = 0 초기화
+ 590:	13 82       	std	Z+3, r1	; 0x03
+ 592:	12 82       	std	Z+2, r1	; 0x02
+				stClock->hour++;		 // hour 증가
+ 594:	80 81       	ld	r24, Z
+ 596:	91 81       	ldd	r25, Z+1	; 0x01
+ 598:	01 96       	adiw	r24, 0x01	; 1
+ 59a:	91 83       	std	Z+1, r25	; 0x01
+ 59c:	80 83       	st	Z, r24
+				if (stClock->hour >= 24) // 24h 도달시
+ 59e:	48 97       	sbiw	r24, 0x18	; 24
+ 5a0:	14 f0       	brlt	.+4      	; 0x5a6 <incMSec+0x62>
+				{
+					stClock->hour = 0; // hour = 0 초기화
+ 5a2:	11 82       	std	Z+1, r1	; 0x01
+ 5a4:	10 82       	st	Z, r1
+ 5a6:	08 95       	ret
+
+000005a8 <timeClockExcute>:
+
+// 시계 실행함수 정의
+void timeClockExcute()
+{
+	// FND로 데이터 보내 시간 출력시킴으로써 시계 실행
+	setFndData(stTimeClock.min * 100 + stTimeClock.sec);
+ 5a8:	ed e1       	ldi	r30, 0x1D	; 29
+ 5aa:	f1 e0       	ldi	r31, 0x01	; 1
+ 5ac:	82 81       	ldd	r24, Z+2	; 0x02
+ 5ae:	93 81       	ldd	r25, Z+3	; 0x03
+ 5b0:	44 e6       	ldi	r20, 0x64	; 100
+ 5b2:	48 9f       	mul	r20, r24
+ 5b4:	90 01       	movw	r18, r0
+ 5b6:	49 9f       	mul	r20, r25
+ 5b8:	30 0d       	add	r19, r0
+ 5ba:	11 24       	eor	r1, r1
+ 5bc:	84 81       	ldd	r24, Z+4	; 0x04
+ 5be:	95 81       	ldd	r25, Z+5	; 0x05
+ 5c0:	82 0f       	add	r24, r18
+ 5c2:	93 1f       	adc	r25, r19
+ 5c4:	ca cd       	rjmp	.-1132   	; 0x15a <setFndData>
+ 5c6:	08 95       	ret
+
+000005c8 <__divmodhi4>:
+ 5c8:	97 fb       	bst	r25, 7
+ 5ca:	07 2e       	mov	r0, r23
+ 5cc:	16 f4       	brtc	.+4      	; 0x5d2 <__divmodhi4+0xa>
+ 5ce:	00 94       	com	r0
+ 5d0:	06 d0       	rcall	.+12     	; 0x5de <__divmodhi4_neg1>
+ 5d2:	77 fd       	sbrc	r23, 7
+ 5d4:	08 d0       	rcall	.+16     	; 0x5e6 <__divmodhi4_neg2>
+ 5d6:	1a d0       	rcall	.+52     	; 0x60c <__udivmodhi4>
+ 5d8:	07 fc       	sbrc	r0, 7
+ 5da:	05 d0       	rcall	.+10     	; 0x5e6 <__divmodhi4_neg2>
+ 5dc:	3e f4       	brtc	.+14     	; 0x5ec <__divmodhi4_exit>
+
+000005de <__divmodhi4_neg1>:
+ 5de:	90 95       	com	r25
+ 5e0:	81 95       	neg	r24
+ 5e2:	9f 4f       	sbci	r25, 0xFF	; 255
+ 5e4:	08 95       	ret
+
+000005e6 <__divmodhi4_neg2>:
+ 5e6:	70 95       	com	r23
+ 5e8:	61 95       	neg	r22
+ 5ea:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000005ec <__divmodhi4_exit>:
+ 5ec:	08 95       	ret
+
+000005ee <__umulhisi3>:
+ 5ee:	a2 9f       	mul	r26, r18
+ 5f0:	b0 01       	movw	r22, r0
+ 5f2:	b3 9f       	mul	r27, r19
+ 5f4:	c0 01       	movw	r24, r0
+ 5f6:	a3 9f       	mul	r26, r19
+ 5f8:	70 0d       	add	r23, r0
+ 5fa:	81 1d       	adc	r24, r1
+ 5fc:	11 24       	eor	r1, r1
+ 5fe:	91 1d       	adc	r25, r1
+ 600:	b2 9f       	mul	r27, r18
+ 602:	70 0d       	add	r23, r0
+ 604:	81 1d       	adc	r24, r1
+ 606:	11 24       	eor	r1, r1
+ 608:	91 1d       	adc	r25, r1
+ 60a:	08 95       	ret
+
+0000060c <__udivmodhi4>:
+ 60c:	aa 1b       	sub	r26, r26
+ 60e:	bb 1b       	sub	r27, r27
+ 610:	51 e1       	ldi	r21, 0x11	; 17
+ 612:	07 c0       	rjmp	.+14     	; 0x622 <__udivmodhi4_ep>
+
+00000614 <__udivmodhi4_loop>:
+ 614:	aa 1f       	adc	r26, r26
+ 616:	bb 1f       	adc	r27, r27
+ 618:	a6 17       	cp	r26, r22
+ 61a:	b7 07       	cpc	r27, r23
+ 61c:	10 f0       	brcs	.+4      	; 0x622 <__udivmodhi4_ep>
+ 61e:	a6 1b       	sub	r26, r22
+ 620:	b7 0b       	sbc	r27, r23
+
+00000622 <__udivmodhi4_ep>:
+ 622:	88 1f       	adc	r24, r24
+ 624:	99 1f       	adc	r25, r25
+ 626:	5a 95       	dec	r21
+ 628:	a9 f7       	brne	.-22     	; 0x614 <__udivmodhi4_loop>
+ 62a:	80 95       	com	r24
+ 62c:	90 95       	com	r25
+ 62e:	bc 01       	movw	r22, r24
+ 630:	cd 01       	movw	r24, r26
+ 632:	08 95       	ret
+
+00000634 <_exit>:
+ 634:	f8 94       	cli
+
+00000636 <__stop_program>:
+ 636:	ff cf       	rjmp	.-2      	; 0x636 <__stop_program>
