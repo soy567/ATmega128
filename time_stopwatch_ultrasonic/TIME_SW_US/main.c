@@ -35,6 +35,7 @@ ISR(INT0_vect) {
     }
 }
 
+// Timer 0 레지스터 설정 (주기 1ms인 clk생성 설정)
 void timerInt1MsInit() {
     TCCR0 |= (1 << CS02);  // | (1<<CS01) | (1<<CS00);
     TIMSK |= (1 << TOIE0);
