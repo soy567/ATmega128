@@ -1,0 +1,619 @@
+
+4FND_prac.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000c  00800100  00000346  000003da  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000346  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  0080010c  0080010c  000003e6  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000003e6  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000418  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000088  00000000  00000000  00000458  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000c1a  00000000  00000000  000004e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000009a7  00000000  00000000  000010fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000005d1  00000000  00000000  00001aa1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000cc  00000000  00000000  00002074  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000051f  00000000  00000000  00002140  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000001ea  00000000  00000000  0000265f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000058  00000000  00000000  00002849  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e6 e4       	ldi	r30, 0x46	; 70
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	ac 30       	cpi	r26, 0x0C	; 12
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	ac e0       	ldi	r26, 0x0C	; 12
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	ae 30       	cpi	r26, 0x0E	; 14
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	fe d0       	rcall	.+508    	; 0x2c0 <main>
+  c4:	3e c1       	rjmp	.+636    	; 0x342 <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <getButton1State>:
+	BUTTON_DDR &= ~((1<<BUTTON1) | (1<<BUTTON2));
+}
+
+uint8_t getButton1State() {
+	static uint8_t prevButton1State = RELEASED;
+	uint8_t curButtonState = BUTTON_PIN & (1<<BUTTON1);
+  c8:	83 b3       	in	r24, 0x13	; 19
+  ca:	98 2f       	mov	r25, r24
+  cc:	91 70       	andi	r25, 0x01	; 1
+	
+	if (prevButton1State != PUSHED && curButtonState == PUSHED) {
+  ce:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+  d2:	88 23       	and	r24, r24
+  d4:	31 f0       	breq	.+12     	; 0xe2 <getButton1State+0x1a>
+  d6:	91 11       	cpse	r25, r1
+  d8:	04 c0       	rjmp	.+8      	; 0xe2 <getButton1State+0x1a>
+		prevButton1State = PUSHED;
+  da:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+		return FALSE;
+  de:	80 e0       	ldi	r24, 0x00	; 0
+  e0:	08 95       	ret
+	}
+	else if (prevButton1State == PUSHED && curButtonState != PUSHED) {
+  e2:	81 11       	cpse	r24, r1
+  e4:	06 c0       	rjmp	.+12     	; 0xf2 <getButton1State+0x2a>
+  e6:	99 23       	and	r25, r25
+  e8:	29 f0       	breq	.+10     	; 0xf4 <getButton1State+0x2c>
+		prevButton1State = RELEASED;
+  ea:	81 e0       	ldi	r24, 0x01	; 1
+  ec:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+		return TRUE;
+  f0:	08 95       	ret
+	}
+	return FALSE;
+  f2:	80 e0       	ldi	r24, 0x00	; 0
+}
+  f4:	08 95       	ret
+
+000000f6 <fndInit>:
+﻿#include "Fnd.h"
+
+void fndInit() {
+	FND_COM_DDR |= (1<<FND_COM_01) | (1<<FND_COM_02) | (1<<FND_COM_03) | (1<<FND_COM_04);
+  f6:	82 b1       	in	r24, 0x02	; 2
+  f8:	80 6f       	ori	r24, 0xF0	; 240
+  fa:	82 b9       	out	0x02, r24	; 2
+	FND_DATA_DDR |= 0xff;
+  fc:	e1 e6       	ldi	r30, 0x61	; 97
+  fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 100:	80 81       	ld	r24, Z
+ 102:	8f ef       	ldi	r24, 0xFF	; 255
+ 104:	80 83       	st	Z, r24
+ 106:	08 95       	ret
+
+00000108 <fndWriteData>:
+		break;
+	}
+}
+
+
+void fndWriteData(uint8_t fndPosition, uint8_t fndData) {
+ 108:	cf 93       	push	r28
+ 10a:	df 93       	push	r29
+ 10c:	cd b7       	in	r28, 0x3d	; 61
+ 10e:	de b7       	in	r29, 0x3e	; 62
+ 110:	2a 97       	sbiw	r28, 0x0a	; 10
+ 112:	0f b6       	in	r0, 0x3f	; 63
+ 114:	f8 94       	cli
+ 116:	de bf       	out	0x3e, r29	; 62
+ 118:	0f be       	out	0x3f, r0	; 63
+ 11a:	cd bf       	out	0x3d, r28	; 61
+	// fnd에 출력할 숫자에 따른 Seg 정보
+	uint8_t aFndFont[10] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x27, 0x7f, 0x67};
+ 11c:	9a e0       	ldi	r25, 0x0A	; 10
+ 11e:	e1 e0       	ldi	r30, 0x01	; 1
+ 120:	f1 e0       	ldi	r31, 0x01	; 1
+ 122:	de 01       	movw	r26, r28
+ 124:	11 96       	adiw	r26, 0x01	; 1
+ 126:	01 90       	ld	r0, Z+
+ 128:	0d 92       	st	X+, r0
+ 12a:	9a 95       	dec	r25
+ 12c:	e1 f7       	brne	.-8      	; 0x126 <fndWriteData+0x1e>
+	
+	// 출력 데이터 범위 검사
+	if (fndData >= 10) fndData = 0;
+ 12e:	6a 30       	cpi	r22, 0x0A	; 10
+ 130:	08 f0       	brcs	.+2      	; 0x134 <fndWriteData+0x2c>
+ 132:	60 e0       	ldi	r22, 0x00	; 0
+	else if (fndData < 0) fndData = 0;
+	
+	// 출력 위치 범위 검사
+	if (fndPosition >= 4) fndPosition = 0;
+ 134:	84 30       	cpi	r24, 0x04	; 4
+ 136:	08 f0       	brcs	.+2      	; 0x13a <fndWriteData+0x32>
+ 138:	80 e0       	ldi	r24, 0x00	; 0
+	else if (fndPosition< 0) fndPosition = 0;
+	
+	FND_COM_PORT &= ~((1<<FND_COM_01) | (1<<FND_COM_02) | (1<<FND_COM_03) | (1<<FND_COM_04));
+ 13a:	93 b1       	in	r25, 0x03	; 3
+ 13c:	9f 70       	andi	r25, 0x0F	; 15
+ 13e:	93 b9       	out	0x03, r25	; 3
+	FND_DATA_PORT = ~aFndFont[fndData];
+ 140:	e1 e0       	ldi	r30, 0x01	; 1
+ 142:	f0 e0       	ldi	r31, 0x00	; 0
+ 144:	ec 0f       	add	r30, r28
+ 146:	fd 1f       	adc	r31, r29
+ 148:	e6 0f       	add	r30, r22
+ 14a:	f1 1d       	adc	r31, r1
+ 14c:	90 81       	ld	r25, Z
+ 14e:	90 95       	com	r25
+ 150:	90 93 62 00 	sts	0x0062, r25	; 0x800062 <__TEXT_REGION_LENGTH__+0x7e0062>
+	
+	switch(fndPosition) {
+ 154:	81 30       	cpi	r24, 0x01	; 1
+ 156:	51 f0       	breq	.+20     	; 0x16c <fndWriteData+0x64>
+ 158:	28 f0       	brcs	.+10     	; 0x164 <fndWriteData+0x5c>
+ 15a:	82 30       	cpi	r24, 0x02	; 2
+ 15c:	59 f0       	breq	.+22     	; 0x174 <fndWriteData+0x6c>
+ 15e:	83 30       	cpi	r24, 0x03	; 3
+ 160:	69 f0       	breq	.+26     	; 0x17c <fndWriteData+0x74>
+ 162:	0f c0       	rjmp	.+30     	; 0x182 <fndWriteData+0x7a>
+		case FND_DIGIT_1:
+		FND_COM_PORT |= (1<<FND_COM_01);
+ 164:	83 b1       	in	r24, 0x03	; 3
+ 166:	80 61       	ori	r24, 0x10	; 16
+ 168:	83 b9       	out	0x03, r24	; 3
+		break;
+ 16a:	0b c0       	rjmp	.+22     	; 0x182 <fndWriteData+0x7a>
+		
+		case FND_DIGIT_2:
+		FND_COM_PORT |= (1<<FND_COM_02);
+ 16c:	83 b1       	in	r24, 0x03	; 3
+ 16e:	80 62       	ori	r24, 0x20	; 32
+ 170:	83 b9       	out	0x03, r24	; 3
+		break;
+ 172:	07 c0       	rjmp	.+14     	; 0x182 <fndWriteData+0x7a>
+		
+		case FND_DIGIT_3:
+		FND_COM_PORT |= (1<<FND_COM_03);
+ 174:	83 b1       	in	r24, 0x03	; 3
+ 176:	80 64       	ori	r24, 0x40	; 64
+ 178:	83 b9       	out	0x03, r24	; 3
+		break;
+ 17a:	03 c0       	rjmp	.+6      	; 0x182 <fndWriteData+0x7a>
+		
+		case FND_DIGIT_4:
+		FND_COM_PORT |= (1<<FND_COM_04);
+ 17c:	83 b1       	in	r24, 0x03	; 3
+ 17e:	80 68       	ori	r24, 0x80	; 128
+ 180:	83 b9       	out	0x03, r24	; 3
+		break;	
+	}
+ 182:	2a 96       	adiw	r28, 0x0a	; 10
+ 184:	0f b6       	in	r0, 0x3f	; 63
+ 186:	f8 94       	cli
+ 188:	de bf       	out	0x3e, r29	; 62
+ 18a:	0f be       	out	0x3f, r0	; 63
+ 18c:	cd bf       	out	0x3d, r28	; 61
+ 18e:	df 91       	pop	r29
+ 190:	cf 91       	pop	r28
+ 192:	08 95       	ret
+
+00000194 <fndDisplayData>:
+void fndInit() {
+	FND_COM_DDR |= (1<<FND_COM_01) | (1<<FND_COM_02) | (1<<FND_COM_03) | (1<<FND_COM_04);
+	FND_DATA_DDR |= 0xff;
+}
+
+void fndDisplayData(uint16_t fndData) {
+ 194:	ac 01       	movw	r20, r24
+	static uint16_t displayState = 0;
+	
+	if (fndData >= 10000) fndData = 9999;
+ 196:	80 31       	cpi	r24, 0x10	; 16
+ 198:	97 42       	sbci	r25, 0x27	; 39
+ 19a:	10 f0       	brcs	.+4      	; 0x1a0 <fndDisplayData+0xc>
+ 19c:	4f e0       	ldi	r20, 0x0F	; 15
+ 19e:	57 e2       	ldi	r21, 0x27	; 39
+	else if (fndData < 0) fndData = 0;
+	
+	displayState = (displayState + 1) % 4;
+ 1a0:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__data_end>
+ 1a4:	90 91 0d 01 	lds	r25, 0x010D	; 0x80010d <__data_end+0x1>
+ 1a8:	01 96       	adiw	r24, 0x01	; 1
+ 1aa:	83 70       	andi	r24, 0x03	; 3
+ 1ac:	99 27       	eor	r25, r25
+ 1ae:	90 93 0d 01 	sts	0x010D, r25	; 0x80010d <__data_end+0x1>
+ 1b2:	80 93 0c 01 	sts	0x010C, r24	; 0x80010c <__data_end>
+	
+	switch(displayState) {
+ 1b6:	81 30       	cpi	r24, 0x01	; 1
+ 1b8:	91 05       	cpc	r25, r1
+ 1ba:	e9 f0       	breq	.+58     	; 0x1f6 <fndDisplayData+0x62>
+ 1bc:	40 f0       	brcs	.+16     	; 0x1ce <fndDisplayData+0x3a>
+ 1be:	82 30       	cpi	r24, 0x02	; 2
+ 1c0:	91 05       	cpc	r25, r1
+ 1c2:	09 f4       	brne	.+2      	; 0x1c6 <fndDisplayData+0x32>
+ 1c4:	3e c0       	rjmp	.+124    	; 0x242 <fndDisplayData+0xae>
+ 1c6:	03 97       	sbiw	r24, 0x03	; 3
+ 1c8:	09 f4       	brne	.+2      	; 0x1cc <fndDisplayData+0x38>
+ 1ca:	5f c0       	rjmp	.+190    	; 0x28a <fndDisplayData+0xf6>
+ 1cc:	08 95       	ret
+		case 0:
+		fndWriteData(FND_DIGIT_1, fndData/1000);
+ 1ce:	9a 01       	movw	r18, r20
+ 1d0:	36 95       	lsr	r19
+ 1d2:	27 95       	ror	r18
+ 1d4:	36 95       	lsr	r19
+ 1d6:	27 95       	ror	r18
+ 1d8:	36 95       	lsr	r19
+ 1da:	27 95       	ror	r18
+ 1dc:	a5 ec       	ldi	r26, 0xC5	; 197
+ 1de:	b0 e2       	ldi	r27, 0x20	; 32
+ 1e0:	a1 d0       	rcall	.+322    	; 0x324 <__umulhisi3>
+ 1e2:	92 95       	swap	r25
+ 1e4:	82 95       	swap	r24
+ 1e6:	8f 70       	andi	r24, 0x0F	; 15
+ 1e8:	89 27       	eor	r24, r25
+ 1ea:	9f 70       	andi	r25, 0x0F	; 15
+ 1ec:	89 27       	eor	r24, r25
+ 1ee:	68 2f       	mov	r22, r24
+ 1f0:	80 e0       	ldi	r24, 0x00	; 0
+ 1f2:	8a cf       	rjmp	.-236    	; 0x108 <fndWriteData>
+		break;
+ 1f4:	08 95       	ret
+		
+		case 1:
+		fndWriteData(FND_DIGIT_2, (fndData / 100) % 10);
+ 1f6:	9a 01       	movw	r18, r20
+ 1f8:	36 95       	lsr	r19
+ 1fa:	27 95       	ror	r18
+ 1fc:	36 95       	lsr	r19
+ 1fe:	27 95       	ror	r18
+ 200:	ab e7       	ldi	r26, 0x7B	; 123
+ 202:	b4 e1       	ldi	r27, 0x14	; 20
+ 204:	8f d0       	rcall	.+286    	; 0x324 <__umulhisi3>
+ 206:	ac 01       	movw	r20, r24
+ 208:	56 95       	lsr	r21
+ 20a:	47 95       	ror	r20
+ 20c:	9a 01       	movw	r18, r20
+ 20e:	ad ec       	ldi	r26, 0xCD	; 205
+ 210:	bc ec       	ldi	r27, 0xCC	; 204
+ 212:	88 d0       	rcall	.+272    	; 0x324 <__umulhisi3>
+ 214:	96 95       	lsr	r25
+ 216:	87 95       	ror	r24
+ 218:	96 95       	lsr	r25
+ 21a:	87 95       	ror	r24
+ 21c:	96 95       	lsr	r25
+ 21e:	87 95       	ror	r24
+ 220:	bc 01       	movw	r22, r24
+ 222:	66 0f       	add	r22, r22
+ 224:	77 1f       	adc	r23, r23
+ 226:	88 0f       	add	r24, r24
+ 228:	99 1f       	adc	r25, r25
+ 22a:	88 0f       	add	r24, r24
+ 22c:	99 1f       	adc	r25, r25
+ 22e:	88 0f       	add	r24, r24
+ 230:	99 1f       	adc	r25, r25
+ 232:	86 0f       	add	r24, r22
+ 234:	97 1f       	adc	r25, r23
+ 236:	28 1b       	sub	r18, r24
+ 238:	39 0b       	sbc	r19, r25
+ 23a:	62 2f       	mov	r22, r18
+ 23c:	81 e0       	ldi	r24, 0x01	; 1
+ 23e:	64 cf       	rjmp	.-312    	; 0x108 <fndWriteData>
+		break;
+ 240:	08 95       	ret
+		
+		case 2:
+		fndWriteData(FND_DIGIT_3, (fndData / 10) % 10);
+ 242:	9a 01       	movw	r18, r20
+ 244:	ad ec       	ldi	r26, 0xCD	; 205
+ 246:	bc ec       	ldi	r27, 0xCC	; 204
+ 248:	6d d0       	rcall	.+218    	; 0x324 <__umulhisi3>
+ 24a:	ac 01       	movw	r20, r24
+ 24c:	56 95       	lsr	r21
+ 24e:	47 95       	ror	r20
+ 250:	56 95       	lsr	r21
+ 252:	47 95       	ror	r20
+ 254:	56 95       	lsr	r21
+ 256:	47 95       	ror	r20
+ 258:	9a 01       	movw	r18, r20
+ 25a:	64 d0       	rcall	.+200    	; 0x324 <__umulhisi3>
+ 25c:	96 95       	lsr	r25
+ 25e:	87 95       	ror	r24
+ 260:	96 95       	lsr	r25
+ 262:	87 95       	ror	r24
+ 264:	96 95       	lsr	r25
+ 266:	87 95       	ror	r24
+ 268:	bc 01       	movw	r22, r24
+ 26a:	66 0f       	add	r22, r22
+ 26c:	77 1f       	adc	r23, r23
+ 26e:	88 0f       	add	r24, r24
+ 270:	99 1f       	adc	r25, r25
+ 272:	88 0f       	add	r24, r24
+ 274:	99 1f       	adc	r25, r25
+ 276:	88 0f       	add	r24, r24
+ 278:	99 1f       	adc	r25, r25
+ 27a:	86 0f       	add	r24, r22
+ 27c:	97 1f       	adc	r25, r23
+ 27e:	28 1b       	sub	r18, r24
+ 280:	39 0b       	sbc	r19, r25
+ 282:	62 2f       	mov	r22, r18
+ 284:	82 e0       	ldi	r24, 0x02	; 2
+ 286:	40 cf       	rjmp	.-384    	; 0x108 <fndWriteData>
+		break;
+ 288:	08 95       	ret
+		
+		case 3:
+		fndWriteData(FND_DIGIT_4, fndData % 10);
+ 28a:	9a 01       	movw	r18, r20
+ 28c:	ad ec       	ldi	r26, 0xCD	; 205
+ 28e:	bc ec       	ldi	r27, 0xCC	; 204
+ 290:	49 d0       	rcall	.+146    	; 0x324 <__umulhisi3>
+ 292:	96 95       	lsr	r25
+ 294:	87 95       	ror	r24
+ 296:	96 95       	lsr	r25
+ 298:	87 95       	ror	r24
+ 29a:	96 95       	lsr	r25
+ 29c:	87 95       	ror	r24
+ 29e:	bc 01       	movw	r22, r24
+ 2a0:	66 0f       	add	r22, r22
+ 2a2:	77 1f       	adc	r23, r23
+ 2a4:	88 0f       	add	r24, r24
+ 2a6:	99 1f       	adc	r25, r25
+ 2a8:	88 0f       	add	r24, r24
+ 2aa:	99 1f       	adc	r25, r25
+ 2ac:	88 0f       	add	r24, r24
+ 2ae:	99 1f       	adc	r25, r25
+ 2b0:	86 0f       	add	r24, r22
+ 2b2:	97 1f       	adc	r25, r23
+ 2b4:	28 1b       	sub	r18, r24
+ 2b6:	39 0b       	sbc	r19, r25
+ 2b8:	62 2f       	mov	r22, r18
+ 2ba:	83 e0       	ldi	r24, 0x03	; 3
+ 2bc:	25 cf       	rjmp	.-438    	; 0x108 <fndWriteData>
+ 2be:	08 95       	ret
+
+000002c0 <main>:
+
+enum {eFndInc, eFndDec};
+
+int main(void) {
+	// 초기화 함수
+	fndInit();
+ 2c0:	1a df       	rcall	.-460    	; 0xf6 <fndInit>
+	int16_t count = 0;
+	uint8_t fndStateMachine = eFndInc;
+ 2c2:	10 e0       	ldi	r17, 0x00	; 0
+enum {eFndInc, eFndDec};
+
+int main(void) {
+	// 초기화 함수
+	fndInit();
+	int16_t count = 0;
+ 2c4:	c0 e0       	ldi	r28, 0x00	; 0
+ 2c6:	d0 e0       	ldi	r29, 0x00	; 0
+ 2c8:	03 c0       	rjmp	.+6      	; 0x2d0 <main+0x10>
+				if (count >= 10000) count = 0;
+				fndDisplayData(count); // 카운트 한 숫자 FND에 출력
+				_delay_ms(5);
+				
+				if (getButton1State()) {
+					fndStateMachine = eFndDec;
+ 2ca:	11 e0       	ldi	r17, 0x01	; 1
+ 2cc:	01 c0       	rjmp	.+2      	; 0x2d0 <main+0x10>
+				}
+				fndDisplayData(count);
+				_delay_ms(5);
+				
+				if (getButton1State()) {
+					fndStateMachine = eFndInc;
+ 2ce:	10 e0       	ldi	r17, 0x00	; 0
+	fndInit();
+	int16_t count = 0;
+	uint8_t fndStateMachine = eFndInc;
+	
+    while (1) {
+		switch(fndStateMachine) {
+ 2d0:	11 23       	and	r17, r17
+ 2d2:	19 f0       	breq	.+6      	; 0x2da <main+0x1a>
+ 2d4:	11 30       	cpi	r17, 0x01	; 1
+ 2d6:	a1 f0       	breq	.+40     	; 0x300 <main+0x40>
+ 2d8:	fb cf       	rjmp	.-10     	; 0x2d0 <main+0x10>
+			case eFndInc: {
+				count++;
+ 2da:	21 96       	adiw	r28, 0x01	; 1
+				if (count >= 10000) count = 0;
+ 2dc:	c0 31       	cpi	r28, 0x10	; 16
+ 2de:	87 e2       	ldi	r24, 0x27	; 39
+ 2e0:	d8 07       	cpc	r29, r24
+ 2e2:	14 f0       	brlt	.+4      	; 0x2e8 <main+0x28>
+ 2e4:	c0 e0       	ldi	r28, 0x00	; 0
+ 2e6:	d0 e0       	ldi	r29, 0x00	; 0
+				fndDisplayData(count); // 카운트 한 숫자 FND에 출력
+ 2e8:	ce 01       	movw	r24, r28
+ 2ea:	54 df       	rcall	.-344    	; 0x194 <fndDisplayData>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 2ec:	8f e1       	ldi	r24, 0x1F	; 31
+ 2ee:	9e e4       	ldi	r25, 0x4E	; 78
+ 2f0:	01 97       	sbiw	r24, 0x01	; 1
+ 2f2:	f1 f7       	brne	.-4      	; 0x2f0 <main+0x30>
+ 2f4:	00 c0       	rjmp	.+0      	; 0x2f6 <main+0x36>
+				_delay_ms(5);
+				
+				if (getButton1State()) {
+ 2f6:	00 00       	nop
+ 2f8:	e7 de       	rcall	.-562    	; 0xc8 <getButton1State>
+ 2fa:	81 11       	cpse	r24, r1
+ 2fc:	e6 cf       	rjmp	.-52     	; 0x2ca <main+0xa>
+ 2fe:	e8 cf       	rjmp	.-48     	; 0x2d0 <main+0x10>
+				}
+				break;
+			}
+			
+			case eFndDec: {
+				count--;
+ 300:	21 97       	sbiw	r28, 0x01	; 1
+				if (count <= 0) {
+ 302:	1c 16       	cp	r1, r28
+ 304:	1d 06       	cpc	r1, r29
+ 306:	14 f0       	brlt	.+4      	; 0x30c <main+0x4c>
+					count = 9999;
+ 308:	cf e0       	ldi	r28, 0x0F	; 15
+				}
+				fndDisplayData(count);
+ 30a:	d7 e2       	ldi	r29, 0x27	; 39
+ 30c:	ce 01       	movw	r24, r28
+ 30e:	42 df       	rcall	.-380    	; 0x194 <fndDisplayData>
+ 310:	8f e1       	ldi	r24, 0x1F	; 31
+ 312:	9e e4       	ldi	r25, 0x4E	; 78
+ 314:	01 97       	sbiw	r24, 0x01	; 1
+ 316:	f1 f7       	brne	.-4      	; 0x314 <main+0x54>
+ 318:	00 c0       	rjmp	.+0      	; 0x31a <main+0x5a>
+				_delay_ms(5);
+				
+				if (getButton1State()) {
+ 31a:	00 00       	nop
+ 31c:	d5 de       	rcall	.-598    	; 0xc8 <getButton1State>
+ 31e:	81 11       	cpse	r24, r1
+ 320:	d6 cf       	rjmp	.-84     	; 0x2ce <main+0xe>
+ 322:	d6 cf       	rjmp	.-84     	; 0x2d0 <main+0x10>
+
+00000324 <__umulhisi3>:
+ 324:	a2 9f       	mul	r26, r18
+ 326:	b0 01       	movw	r22, r0
+ 328:	b3 9f       	mul	r27, r19
+ 32a:	c0 01       	movw	r24, r0
+ 32c:	a3 9f       	mul	r26, r19
+ 32e:	70 0d       	add	r23, r0
+ 330:	81 1d       	adc	r24, r1
+ 332:	11 24       	eor	r1, r1
+ 334:	91 1d       	adc	r25, r1
+ 336:	b2 9f       	mul	r27, r18
+ 338:	70 0d       	add	r23, r0
+ 33a:	81 1d       	adc	r24, r1
+ 33c:	11 24       	eor	r1, r1
+ 33e:	91 1d       	adc	r25, r1
+ 340:	08 95       	ret
+
+00000342 <_exit>:
+ 342:	f8 94       	cli
+
+00000344 <__stop_program>:
+ 344:	ff cf       	rjmp	.-2      	; 0x344 <__stop_program>
