@@ -54,6 +54,11 @@ dkms.conf
 # DS_Store
 .DS_Store
 
+# media
+*.mp4
+*.pptx
+*.drawio
+
 # PDF File
 *.pdf
 
